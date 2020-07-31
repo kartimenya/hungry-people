@@ -1,0 +1,141 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+button{
+  border: none;
+  background: none;
+}
+ul,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.header{
+  background: url(../img/header-bg.jpg) no-repeat center/cover;
+  height: 100vh;
+  &__row{
+    position: relative;
+    padding-top: 55px;
+  }
+  &__logo{
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  &__social{
+    position: absolute;
+    right: 79px;
+    top: 40%;
+  }
+  &__battons{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    .btn{
+      margin: 0 20px;
+      &:nth-child(1){
+        background: #E8C300;
+      }
+      &:nth-child(2){
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+  &__down-btn{
+    position: absolute;
+    bottom: 83px;
+    left: 50%;
+    transform: translate(-50%);
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__aside{
+    position: absolute;
+    left: 81px;
+    top: 30%;
+    p{
+      writing-mode: tb-rl;
+       transform:rotate(180deg);
+       font-weight: bold;
+        font-size: 12px;
+        line-height: 12px;
+        color: #fff;
+    }
+  }
+}
+.menu{
+  &__list{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    li{
+      width: 130px;
+      text-align: center;
+      &:nth-child(4){
+        margin: 0 45px 0 0;
+      }
+      &:nth-child(5){
+        margin: 0 0 0 45px;
+      }
+    }
+  }
+}
+.social{
+  &__list{
+    li{
+      margin: 10px 0;
+    }
+  }
+}
+.btn{
+  width: 200px;
+  height: 60px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.header__title{
+  margin-top: 226px;
+  p{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #fff;
+    text-align: center;
+  }
+  h1{
+    font-family: Banny;
+    font-size: 96px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    &:after{
+      content: '';
+      display: block;
+      width: 60px;
+      border-radius: 50px;
+      height: 5px;
+      background: #E8C300;
+      margin: 0 auto;
+    }
+  }
+}
