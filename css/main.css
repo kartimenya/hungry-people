@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -358,6 +359,24 @@ a {
   border-radius: 5px;
 }
 
+.img-blocl {
+  position: relative;
+}
+.img-blocl::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin-left: 20px;
+  content: "";
+  display: block;
+  width: 250px;
+  height: 250px;
+  border: 20px solid #E8C300;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
 .about {
   padding: 100px 0;
 }
@@ -365,6 +384,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.about__information {
+  max-width: 630px;
 }
 @media (max-width: 800px) {
   .about__wrapper {
@@ -379,4 +401,235 @@ a {
 }
 .about__title .title__info {
   margin-top: 20px;
+}
+
+.team {
+  background: url(../img/specialtys-bg.jpg) no-repeat center/cover;
+  color: #fff;
+  padding: 100px 0;
+}
+.team__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.team__title {
+  margin-bottom: 20px;
+}
+.team__title .title__info {
+  margin-top: 20px;
+}
+@media (max-width: 800px) {
+  .team__wrapper {
+    flex-wrap: wrap;
+  }
+  .team__img-blocl img {
+    max-width: 100%;
+  }
+  .team .bug {
+    order: 2;
+  }
+  .team__information {
+    order: -1;
+  }
+}
+
+.book {
+  padding: 100px 0;
+  padding: 100px 0;
+}
+.book__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.book__information {
+  max-width: 630px;
+}
+@media (max-width: 1230px) {
+  .book__wrapper {
+    justify-content: center;
+  }
+  .book__img-blocl {
+    display: none;
+  }
+}
+.book__title {
+  margin-bottom: 20px;
+}
+.book__title .title__info {
+  margin-top: 20px;
+}
+.book__form {
+  max-width: 579px;
+}
+.book__input {
+  margin: 5px;
+}
+.book .btn {
+  background: #E8C300;
+  width: 100%;
+}
+
+.input {
+  width: 277px;
+  height: 60px;
+  background: #E5E5E5;
+  border-radius: 5px;
+  border: none;
+  padding: 0 10px;
+}
+
+.specialties {
+  padding: 100px 0;
+  background: url(../img/specialtys-bg-1.jpg) no-repeat center/cover;
+  padding: 100px 0;
+}
+.specialties__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.specialties__information {
+  max-width: 630px;
+}
+@media (max-width: 1230px) {
+  .specialties__wrapper {
+    justify-content: center;
+  }
+  .specialties__img-blocl {
+    display: none;
+  }
+}
+.specialties__title {
+  margin-bottom: 20px;
+}
+.specialties__title .title__info {
+  margin-top: 20px;
+}
+.specialties__form {
+  max-width: 579px;
+}
+.specialties__input {
+  margin: 5px;
+}
+.specialties .btn {
+  background: #E8C300;
+  width: 100%;
+}
+
+/* Собственно сам слайдер */
+.slider {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+  object-fit: cover;
+  width: 100%;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Заголовок слайда */
+.slideText {
+  position: absolute;
+  color: #fff;
+  font-size: 35px;
+  /* Выравнивание текста по горизонтали и по вертикали*/
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* Тень*/
+  text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+
+/* Кружочки */
+.slider-dots {
+  text-align: center;
+}
+
+.slider-dots_item {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.slider-dots_item:hover {
+  background-color: #aaa;
+}
+
+/* Анимация слайдов */
+.slider .item {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.tabs .tab-menu {
+  margin-bottom: 50px;
+}
+.tabs .tab-menu__list {
+  display: flex;
+  justify-content: center;
+}
+.tabs .tab-menu__list li {
+  padding-top: 13px;
+  border-right: 1px solid rgba(51, 51, 51, 0.2);
+  width: 120px;
+  height: 50px;
+  text-align: center;
+}
+.tabs .tab-menu__list li:last-child {
+  border: none;
+}
+.tabs .tab-menu__item {
+  color: #333;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+}
+.delicious-menu {
+  padding: 100px 0;
+}
+.delicious-menu .dish__name {
+  font-size: 18px;
+  line-height: 18px;
+  color: #333333;
+  font-weight: bold;
+}
+.delicious-menu .dish__description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #333333;
+}
+.delicious-menu__tabs {
+  margin-top: 50px;
+}
+
+.dishs-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.dishs-list li {
+  margin-bottom: 25px;
 }
