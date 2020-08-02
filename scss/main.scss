@@ -26,7 +26,6 @@ a{
 .title{
   &__name{
     font-size: 36px;
-    line-height: 48px;
     text-align: center;
     text-transform: uppercase;
     &:after{
@@ -86,21 +85,10 @@ a{
       color: #fff;
       text-align: center;
     }
-    h1{
+    .title__name{
       font-size: 96px;
       color: #fff;
-      text-transform: uppercase;
-      text-align: center;
       margin-top: 10px;
-      &:after{
-        content: '';
-        display: block;
-        width: 60px;
-        border-radius: 50px;
-        height: 5px;
-        background: #E8C300;
-        margin: 0 auto;
-      }
     }
   }
   @media (max-width: 1000px){
@@ -141,10 +129,8 @@ a{
     margin-top: 30px;
     .btn{
       margin: 0 20px;
-      &:nth-child(1){
-        background: #E8C300;
-      }
       &:nth-child(2){
+        background: none;
         border: 1px solid rgba(255, 255, 255, 0.5);
       }
     }
@@ -216,8 +202,8 @@ a{
     display: none;
   }
 }
-@media (max-width: 800px){
 
+@media (max-width: 800px){
   .menu{
     &__body{
       position: fixed;
@@ -320,6 +306,7 @@ a{
   width: 200px;
   height: 60px;
   border-radius: 5px;
+  background: #E8C300;
   color: #fff;
   font-size: 12px;
   line-height: 20px;
@@ -335,44 +322,12 @@ a{
     text-align: center;
   }
 }
-.bug{
-  position: relative;
-  max-width: 630px;
-}
-.img-blocl-right{
-  position: relative;
-  &::after{
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 0;
-      margin-left: 20px;
-      content: '';
-      display: block;
-      width: 250px;
-      height: 250px;
-      border: 20px solid #E8C300;
-      box-sizing: border-box;
-      border-radius: 5px;
-  }
-}
-.img-blocl{
-  position: relative;
-  &::after{
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      margin-left: 20px;
-      content: '';
-      display: block;
-      width: 250px;
-      height: 250px;
-      border: 20px solid #E8C300;
-      box-sizing: border-box;
-      border-radius: 5px;
-  }
-}
+
+
+
+
+//about sectio
+
 .about{
   padding: 100px 0;
   &__wrapper{
@@ -383,19 +338,10 @@ a{
   &__information{
     max-width: 630px;
   }
-  &__img-blocl{
-    img{
-      //max-width: 100%;
-    }
-  }
+
   @media (max-width: 800px){
     &__wrapper{
       display: block;
-    }
-    &__img-blocl{
-      img{
-        max-width: 100%;
-      }
     }
   }
   &__title{
@@ -425,11 +371,6 @@ a{
     &__wrapper{
       flex-wrap: wrap;
     }
-    &__img-blocl{
-      img{
-        max-width: 100%;
-      }
-    }
     .bug{
       order: 2;
     }
@@ -449,17 +390,10 @@ a{
   &__information{
     max-width: 630px;
   }
-  &__img-blocl{
-    img{
-      //max-width: 100%;
-    }
-  }
+
   @media (max-width: 1230px){
     &__wrapper{
       justify-content: center;
-    }
-    &__img-blocl{
-      display: none;
     }
   }
   &__title{
@@ -503,11 +437,7 @@ a{
   &__information{
     max-width: 630px;
   }
-  &__img-blocl{
-    img{
-      //max-width: 100%;
-    }
-  }
+
   @media (max-width: 1230px){
     &__wrapper{
       justify-content: center;
@@ -552,7 +482,7 @@ a{
 }
 
 /* Заголовок слайда */
-.slideText {
+.slideText{
     position: absolute;
     color: #fff;
     font-size: 35px;
@@ -566,6 +496,9 @@ a{
 /* Кружочки */
 .slider-dots {
     text-align: center;
+    &.active{
+      background-color: #aaa;
+    }
 }
 .slider-dots_item{
     cursor: pointer;
@@ -577,7 +510,6 @@ a{
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-.active,
 .slider-dots_item:hover {
     background-color: #aaa;
 }
@@ -659,5 +591,46 @@ a{
   justify-content: space-between;
   li{
     margin-bottom: 25px;
+  }
+}
+
+
+.private-events{
+  background: url(../img/br-3.jpg) no-repeat center/cover;
+  padding: 100px;
+  &__box{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.img-section{
+  .img-list{
+    display: flex;
+    &__item{
+      width: 25%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+.textarea{
+  background: #E5E5E5;
+  border-radius: 5px;
+  border: none;
+  padding: 0 10px;
+}
+.contact{
+  &__form{
+    .input{
+      width: 33%;
+    }
+    .textarea{
+      margin-top: 10px;
+      width: 100%;
+      max-width: 100%;
+      max-height: 120px;
+    }
   }
 }
