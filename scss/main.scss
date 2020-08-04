@@ -94,7 +94,7 @@ a{
   @media (max-width: 1000px){
     &__title{
       margin-top: 200px;
-      h1{
+      .title__name{
         font-size: 46px;
         &:after{
           content: '';
@@ -202,7 +202,6 @@ a{
     display: none;
   }
 }
-
 @media (max-width: 800px){
   .menu{
     &__body{
@@ -240,8 +239,6 @@ a{
       }
     }
   }
-
-
   .icon-menu{
     z-index: 30;
     display: block;
@@ -294,7 +291,6 @@ a{
     }
   }
 }
-
 .social{
   &__list{
     li{
@@ -312,9 +308,6 @@ a{
   line-height: 20px;
   font-weight: bold;
 }
-
-
-
 .text-content{
   &__inner{
     font-size: 16px;
@@ -323,11 +316,7 @@ a{
   }
 }
 
-
-
-
 //about sectio
-
 .about{
   padding: 100px 0;
   &__wrapper{
@@ -341,7 +330,13 @@ a{
 
   @media (max-width: 800px){
     &__wrapper{
-      display: block;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &__img-blocl{
+      img{
+        width: 100%;
+      }
     }
   }
   &__title{
@@ -371,13 +366,25 @@ a{
     &__wrapper{
       flex-wrap: wrap;
     }
-    .bug{
-      order: 2;
+    &__img-blocl{
+      img{
+        width: 100%;
+      }
     }
     &__information{
       order: -1;
     }
   }
+}
+
+// book section
+.input{
+  width: 277px;
+  height: 60px;
+  background: #E5E5E5;
+  border-radius: 5px;
+  border: none;
+  padding: 0 10px;
 }
 
 .book{
@@ -386,12 +393,17 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   &__information{
     max-width: 630px;
   }
-
-  @media (max-width: 1230px){
+  @media (max-width: 800px){
+    &__img-blocl{
+      display: none;
+    }
+  }
+  @media (max-width: 1175px){
     &__wrapper{
       justify-content: center;
     }
@@ -409,18 +421,14 @@ a{
   &__input{
     margin: 5px;
   }
+  @media (max-width: 600px){
+    &__input{
+      width: 100%;
+    }
+  }
   .btn{
-    background: #E8C300;
     width: 100%;
   }
-}
-.input{
-  width: 277px;
-  height: 60px;
-  background: #E5E5E5;
-  border-radius: 5px;
-  border: none;
-  padding: 0 10px;
 }
 
 
@@ -597,11 +605,24 @@ a{
 
 .private-events{
   background: url(../img/br-3.jpg) no-repeat center/cover;
-  padding: 100px;
+  padding: 100px 0;
   &__box{
     display: flex;
     justify-content: space-between;
   }
+    @media (max-width: 1230px){
+      &__box{
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+    @media (max-width: 800px){
+      &__img-blocl{
+        img{
+          width: 100%;
+        }
+      }
+    }
 }
 
 .img-section{
